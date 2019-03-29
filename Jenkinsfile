@@ -11,7 +11,7 @@ node {
             sh "mvn clean install"
     }
     
-    stage('$SERVICE') {
+    stage("$SERVICE") {
             git branch: 'master',
                 url: 'https://github.com/mustafaguven/$SERVICE.git'
             sh "mvn clean install -e"
