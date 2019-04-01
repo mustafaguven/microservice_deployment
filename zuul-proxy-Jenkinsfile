@@ -10,14 +10,7 @@ node {
                 url: 'https://github.com/mustafaguven/jwtcommon.git'
             sh "mvn clean install"
     }
-    
-    stage('auth-center') {
-            git branch: 'master',
-                url: 'https://github.com/mustafaguven/auth-center.git'
-            sh "mvn clean install"
-    }
-    
-    
+   
     stage("$SERVICE") {
             git branch: 'master',
                 url: 'https://github.com/mustafaguven/$SERVICE.git'
